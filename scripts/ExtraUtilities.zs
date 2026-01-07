@@ -24,6 +24,10 @@ recipes.addShaped(<ExtraUtilities:spike_base>, [[null, <minecraft:iron_sword>, n
 #Disable dupe inducing cabinets
 recipes.remove(<ExtraUtilities:filing:*>);
 
+# Heating Element
+recipes.remove(<ExtraUtilities:heatingElement>);
+recipes.addShaped(<ExtraUtilities:heatingElement>,[[<minecraft:iron_ingot>, <minecraft:iron_ingot>, <minecraft:iron_ingot>], [<minecraft:iron_ingot>, null, <minecraft:iron_ingot>], [<minecraft:iron_ingot>, <minecraft:blaze_rod>, <minecraft:iron_ingot>]]);
+
 ### Generators ###
 #Survivalist 
 recipes.addShaped(<ExtraUtilities:generator>, [[<minecraft:cobblestone>, <minecraft:cobblestone>, <minecraft:cobblestone>], [<minecraft:iron_ingot>, <ExtraUtilities:heatingElement>.noReturn(), <minecraft:iron_ingot>], [<ore:ingotRedAlloy>, <BuildCraft|Core:engineBlock:1>, <ore:ingotRedAlloy>]]);
@@ -80,7 +84,7 @@ recipes.remove(<ExtraUtilities:generator:4>);
 
 #Deep Dark Portal
 recipes.remove(<ExtraUtilities:dark_portal>);
-recipes.addShaped(<ExtraUtilities:dark_portal>, [[<ExtraUtilities:cobblestone_compressed:3>, <Aroma1997sDimension:portalIgniter>, <ExtraUtilities:cobblestone_compressed:3>], [<Aroma1997sDimension:portalIgniter>, <ExtraUtilities:cobblestone_compressed:4>, <Aroma1997sDimension:portalIgniter>], [<ExtraUtilities:cobblestone_compressed:3>, <Aroma1997sDimension:portalIgniter>, <ExtraUtilities:cobblestone_compressed:3>]]);
+recipes.addShaped(<ExtraUtilities:dark_portal>, [[<ExtraUtilities:cobblestone_compressed:3>, <Aroma1997sDimension:portalIgniter>.noReturn(), <ExtraUtilities:cobblestone_compressed:3>], [<Aroma1997sDimension:portalIgniter>, <ExtraUtilities:cobblestone_compressed:4>, <Aroma1997sDimension:portalIgniter>], [<ExtraUtilities:cobblestone_compressed:3>, <Aroma1997sDimension:portalIgniter>, <ExtraUtilities:cobblestone_compressed:3>]]);
 
 #Natura Compat
 recipes.addShaped(<ExtraUtilities:decorativeBlock1:8>, [[<minecraft:gold_ingot>, <minecraft:enchanted_book>, <minecraft:gold_ingot>], [<minecraft:enchanted_book>, <Natura:Natura.bookshelf:*>, <minecraft:enchanted_book>], [<minecraft:gold_ingot>, <minecraft:enchanted_book>, <minecraft:gold_ingot>]]);

@@ -180,9 +180,9 @@ energy_bank {
 
     # IC2 energy tier for each energy bank (0 is BatBox, etc.)
     I:ic2_tier <
-        2
-        3
-        4
+        5
+        5
+        5
      >
 
     # Maximum energy stored for each energy bank
@@ -230,7 +230,7 @@ general {
     S:schematic_location=warpDrive_schematics
 
     # Space biome ID
-    I:space_biome_id=95
+    I:space_biome_id=169
 
     # Space dimension provider ID
     I:space_provider_id=-2

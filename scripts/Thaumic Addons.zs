@@ -5,19 +5,9 @@ import minetweaker.item.IItemStack;
 print("Initializing 'ThaumicAddons.zs'...");
 
 ###### Page Cleanup ##########
-#AOBD research
-#mods.thaumcraft.Research.moveResearch("PUREORE", "ALCHEMY", -6, 7);
-#mods.thaumcraft.Research.clearPrereqs("PUREORE");
-#mods.thaumcraft.Research.addPrereq("PUREORE", "PUREGOLD", false);
-#mods.thaumcraft.Research.addPrereq("PUREORE", "PURECOPPER", false);
-#mods.thaumcraft.Research.addPrereq("PUREORE", "PURETIN", false);
-#mods.thaumcraft.Research.addPrereq("PUREORE", "PURESILVER", false);
-#mods.thaumcraft.Research.addPrereq("PUREORE", "PURELEAD", false);
-#Tab Removal
-#mods.thaumcraft.Research.removeTab("AOBD");
 
-#Modifying Railcraft research
-#Thaumium Crowbar
+# Modifying Railcraft research
+# Thaumium Crowbar
  mods.thaumcraft.Research.moveResearch("RC_Crowbar", "ARTIFICE", 6, 8);
  mods.thaumcraft.Research.clearPrereqs("RC_Crowbar");
  mods.thaumcraft.Research.addPrereq("RC_Crowbar", "THAUMIUM", false);
@@ -28,20 +18,10 @@ print("Initializing 'ThaumicAddons.zs'...");
  mods.thaumcraft.Research.addPrereq("RC_Crowbar_Void", "RC_Crowbar", false);
  #Tab Removal
  mods.thaumcraft.Research.removeTab("RAILCRAFT");
+
 #########################
 
 ######Thaumcraft##########
-
-##Sand Removal Crucible
-mods.thaumcraft.Crucible.removeRecipe(<minecraft:sand>);
-
-##Bonemeal Removal Crucible
-mods.thaumcraft.Crucible.removeRecipe(<minecraft:dye:15>);
-
-#Quartz Duplication
-mods.thaumcraft.Crucible.addRecipe("ALCHEMICALDUPLICATION", <minecraft:quartz>*2, <minecraft:quartz>, "potentia 2, aqua 2, vitreus 4");
-mods.thaumcraft.Research.addCruciblePage("ALCHEMICALDUPLICATION", <minecraft:quartz>);
-mods.thaumcraft.Research.refreshResearchRecipe("ALCHEMICALDUPLICATION");
 
 //Add recipes for ancient stone types so I don't have to dungeon raid for building blocks
 #this is gonna be fucking hard to do
@@ -74,17 +54,6 @@ mods.thaumcraft.Research.addCraftingPage("ANCIENT_STONE", <Thaumcraft:blockStair
 mods.thaumcraft.Research.addArcanePage("ANCIENT_STONE", <Thaumcraft:blockCosmeticSolid:15>);
 mods.thaumcraft.Research.addCruciblePage("ANCIENT_STONE", <Thaumcraft:blockCosmeticSolid:12>);
 
-###Alchemical Duplication
-#Amethyst
-mods.thaumcraft.Crucible.addRecipe("ALCHEMICALDUPLICATION", <etfuturum:amethyst_shard>*2, <etfuturum:amethyst_shard>, "aqua 2, praecantatio 2, vitreus 4");
-mods.thaumcraft.Research.addCruciblePage("ALCHEMICALDUPLICATION", <etfuturum:amethyst_shard>);
-mods.thaumcraft.Research.refreshResearchRecipe("ALCHEMICALDUPLICATION");
-
-###Alchemical Manufacture
-#Saltblock
-mods.thaumcraft.Crucible.addRecipe("ALCHEMICALMANUFACTURE", <harvestcraft:spamcompressedsaltBlockalt>, <minecraft:sandstone>, "aqua 2, vitreus 4");
-mods.thaumcraft.Research.addCruciblePage("ALCHEMICALMANUFACTURE", <harvestcraft:spamcompressedsaltBlockalt>);
-mods.thaumcraft.Research.refreshResearchRecipe("ALCHEMICALMANUFACTURE");
 #########################
 
 ###### Thaumic Tinkerer ##########
@@ -92,7 +61,6 @@ mods.thaumcraft.Research.refreshResearchRecipe("ALCHEMICALMANUFACTURE");
 mods.thaumcraft.Infusion.removeRecipe(<ThaumicTinkerer:kamiResource>);
 mods.thaumcraft.Infusion.addRecipe("ICHOR", <minecraft:nether_star>, [<Thaumcraft:ItemEldritchObject:3>, <ForbiddenMagic:NetherShard>, <ForbiddenMagic:NetherShard:1>, <ThaumicTinkerer:kamiResource:7>, <ForbiddenMagic:NetherShard:2>, <ForbiddenMagic:NetherShard:3>, <Thaumcraft:ItemEldritchObject:0>, <ForbiddenMagic:NetherShard:4>, <ForbiddenMagic:NetherShard:5>, <ThaumicTinkerer:kamiResource:6>, <ForbiddenMagic:NetherShard:6>, <ForbiddenMagic:GluttonyShard>], "gula 12, lucrum 8, luxuria 6, superbia 5", <ThaumicTinkerer:kamiResource>*8, 9);
 mods.thaumcraft.Research.refreshResearchRecipe("ICHOR");
-
 
 ####Ichorium Rebalanced####
 mods.thaumcraft.Arcane.removeRecipe(<ThaumicTinkerer:kamiResource:2>);
@@ -177,18 +145,18 @@ mods.thaumcraft.Research.removeResearch("ANIMATION_TABLET");
 
 ###### Magia Naturalis ##########
 #Fix construction focus
-recipes.addShapeless(<magianaturalis:item.focusBuild>.withTag({RepairCost: 2, upgrade: [{id: 6 as short}, {id: -1 as short}, {id: -1 as short}, {id: -1 as short}, {id: -1 as short}], magia_naturalis: [{size: 1 as byte, shape: 2 as byte}, {size: 1 as byte, shape: 2 as byte}], display: {Name: "Wand Focus: Construction (Awakened)"}}), [<minecraft:brick>, <magianaturalis:item.focusBuild>]);
-mods.thaumcraft.Research.addCraftingPage("FOCUS_BUILD", <magianaturalis:item.focusBuild>.withTag({RepairCost: 2, upgrade: [{id: 6 as short}, {id: -1 as short}, {id: -1 as short}, {id: -1 as short}, {id: -1 as short}], magia_naturalis: [{size: 1 as byte, shape: 2 as byte}, {size: 1 as byte, shape: 2 as byte}], display: {Name: "Wand Focus: Construction (Awakened)"}}));
+recipes.addShapeless(<magianaturalis:builder_focus>.withTag({RepairCost: 2, upgrade: [{id: 6 as short}, {id: -1 as short}, {id: -1 as short}, {id: -1 as short}, {id: -1 as short}], magia_naturalis: [{size: 1 as byte, shape: 2 as byte}, {size: 1 as byte, shape: 2 as byte}], display: {Name: "Wand Focus: Construction (Awakened)"}}), [<minecraft:brick>, <magianaturalis:builder_focus>]);
+mods.thaumcraft.Research.addCraftingPage("magianaturalis:construction_focus", <magianaturalis:builder_focus>.withTag({RepairCost: 2, upgrade: [{id: 6 as short}, {id: -1 as short}, {id: -1 as short}, {id: -1 as short}, {id: -1 as short}], magia_naturalis: [{size: 1 as byte, shape: 2 as byte}, {size: 1 as byte, shape: 2 as byte}], display: {Name: "Wand Focus: Construction (Awakened)"}}));
 
 #Duping scythe
-mods.thaumcraft.Research.orphanResearch("SICKLE_ABUNDANCE");
-mods.thaumcraft.Research.removeResearch("SICKLE_ABUNDANCE");
+mods.thaumcraft.Research.orphanResearch("magianaturalis:sickle_of_abundance");
+mods.thaumcraft.Research.removeResearch("magianaturalis:sickle_of_abundance");
 
 #Sickle Research auto unlocked
-mods.thaumcraft.Research.setAutoUnlock("SICKLE_THAUM", true);
+mods.thaumcraft.Research.setAutoUnlock("magianaturalis:sickles", true);
 
 #Lock Infusion research behind infusion JAR_PRISON
-mods.thaumcraft.Research.addPrereq("JAR_PRISON", "INFUSION", true);
+mods.thaumcraft.Research.addPrereq("magianaturalis:prison_jar", "INFUSION", true);
 
 #########################
 
@@ -207,10 +175,10 @@ mods.thaumcraft.Arcane.addShapeless("ORE", <Thaumcraft:blockCosmeticSolid:6>*3, 
 mods.thaumcraft.Arcane.addShaped("ORE", <Thaumcraft:blockCosmeticSolid:6> * 8, "terra 1, ignis 1", [[<minecraft:stone>, <minecraft:stone>, <minecraft:stone>], [<minecraft:stone>, <Thaumcraft:ItemShard:*>, <minecraft:stone>], [<minecraft:stone>, <minecraft:stone>, <minecraft:stone>]]);
 
 #Entity in a Jar 
-mods.thaumcraft.Infusion.removeRecipe(<magianaturalis:block.jarPrison>);
-mods.thaumcraft.Infusion.addRecipe("JAR_PRISON", <Thaumcraft:blockJar>, [<minecraft:gold_ingot>, <Thaumcraft:blockCosmeticOpaque:2>, <minecraft:ender_pearl>, <Thaumcraft:blockCosmeticOpaque:2>, <minecraft:lead>, <Thaumcraft:blockCosmeticOpaque:2>, <minecraft:ender_pearl>, <Thaumcraft:blockCosmeticOpaque:2>], "vinculum 8, alienis 8, permutatio 8, vacuos 8, tutamen 8", <magianaturalis:block.jarPrison>, 3);
-mods.thaumcraft.Research.refreshResearchRecipe("JAR_PRISON");
-mods.thaumcraft.Research.addPrereq("JAR_PRISON", "WARDEDARCANA", false);
+mods.thaumcraft.Infusion.removeRecipe(<magianaturalis:prison_jar>);
+mods.thaumcraft.Infusion.addRecipe("magianaturalis:prison_jar", <Thaumcraft:blockJar>, [<minecraft:gold_ingot>, <Thaumcraft:blockCosmeticOpaque:2>, <minecraft:ender_pearl>, <Thaumcraft:blockCosmeticOpaque:2>, <minecraft:lead>, <Thaumcraft:blockCosmeticOpaque:2>, <minecraft:ender_pearl>, <Thaumcraft:blockCosmeticOpaque:2>], "vinculum 8, alienis 8, permutatio 8, vacuos 8, tutamen 8", <magianaturalis:prison_jar>, 3);
+mods.thaumcraft.Research.refreshResearchRecipe("magianaturalis:prison_jar");
+mods.thaumcraft.Research.addPrereq("magianaturalis:prison_jar", "WARDEDARCANA", false);
 #########################
 
 ###### Forbidden Magic ##########

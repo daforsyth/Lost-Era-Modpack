@@ -34,11 +34,7 @@ recipes.addShaped(<cookingforblockheads:toolrack>, [[<ore:pressurePlateWood>, <o
 
 #Toaster
 recipes.remove(<cookingforblockheads:toaster>);
-recipes.addShaped(<cookingforblockheads:toaster>, [[null, null, null], [<minecraft:iron_ingot>, <ExtraUtilities:heatingElement>, <minecraft:iron_ingot>], [<ore:gearIron>, <minecraft:redstone>, <ore:gearIron>]]);
-
-#Heating Element
-recipes.remove(<ExtraUtilities:heatingElement>);
-recipes.addShaped(<ExtraUtilities:heatingElement>, [[<ore:nuggetCopper>, <ore:nuggetCopper>, <ore:nuggetCopper>], [<ore:nuggetCopper>, <minecraft:blaze_powder>, <ore:nuggetCopper>], [<minecraft:iron_ingot>, <minecraft:redstone>, <minecraft:iron_ingot>]]);
+recipes.addShaped(<cookingforblockheads:toaster>, [[null, null, null], [<minecraft:iron_ingot>, <minecraft:blaze_rod>, <minecraft:iron_ingot>], [<ore:gearIron>, <minecraft:redstone>, <ore:gearIron>]]);
 
 #Candle Forestry Compat
 recipes.addShapeless(<harvestcraft:pamcandleDeco1>, [<ore:itemBeeswax>, <minecraft:string>]);
@@ -64,6 +60,9 @@ recipes.addShaped(<cookingforblockheads:cookingoven>, [[<minecraft:stained_glass
 
 #Hardened leather
 recipes.addShapeless(<harvestcraft:hardenedleatherItem>, [<minecraft:leather>, <ore:itemBeeswax>]);
+
+# Cooking Oil machine only
+recipes.remove(<harvestcraft:oliveoilItem>);
 
 ### Salt Module ###
 
@@ -127,7 +126,7 @@ recipes.addShapeless(<harvestcraft:venisonrawItem>, [<harvestcraft:mixingbowlIte
 
 # Pasta
 recipes.remove(<harvestcraft:pastaItem>);
-recipes.addShapeless(<harvestcraft:pastaItem>, [<harvestcraft:mixingbowlItem>, <ore:foodDough>, <ore:foodOliveoil>]);
+recipes.addShapeless(<harvestcraft:pastaItem>, [<harvestcraft:cuttingboardItem>, <ore:foodDough>]);
 
 # Vinegar
 recipes.remove(<harvestcraft:vinegarItem>);
@@ -138,6 +137,9 @@ recipes.addShapeless(<harvestcraft:vinegarItem>, [<harvestcraft:potItem>, <ore:c
 # Cake
 recipes.remove(<minecraft:cake>);
 recipes.addShaped(<minecraft:cake>, [[<ore:listAllmilk>, <ore:listAllmilk>, <ore:listAllmilk>],[<minecraft:sugar>, <minecraft:egg>, <minecraft:sugar>],[<ore:foodFlour>, <ore:foodFlour>, <ore:foodFlour>]]);
+
+# Bread
+recipes.remove(<minecraft:bread>);
 
 # Cookie
 recipes.remove(<minecraft:cookie>);
@@ -269,17 +271,35 @@ recipes.addShapeless(<harvestcraft:gooseberrysmoothieItem>, [<harvestcraft:mixin
 
 ## Recipes
 
+# Toasted Coconut
+furnace.addRecipe(<harvestcraft:toastedcoconutItem>, <ExtraTrees:food:50>);
+
+# Nachos
+recipes.remove(<harvestcraft:nachoesItem>);
+furnace.addRecipe(<harvestcraft:nachoesItem>, <harvestcraft:tortillaItem>);
+
 # Mashed Potatoes
 recipes.remove(<harvestcraft:mashedpotatoesItem>);
 recipes.addShapeless(<harvestcraft:mashedpotatoesItem>, [<harvestcraft:mixingbowlItem>, <minecraft:baked_potato>, <harvestcraft:butterItem>]);
 
 # Fries
 recipes.remove(<harvestcraft:friesItem>);
-recipes.addShapeless(<harvestcraft:friesItem>, [<harvestcraft:bakewareItem>, <minecraft:potato>, <harvestcraft:oliveoilItem>]);
+recipes.addShapeless(<harvestcraft:friesItem>, [<harvestcraft:bakewareItem>, <minecraft:potato>, <harvestcraft:oliveoilItem>, <ore:dustSalt>]);
+
+# Grilled Mushroom
+recipes.remove(<harvestcraft:grilledmushroomItem>);
 
 # Stuffed Mushroom
 recipes.remove(<harvestcraft:stuffedmushroomItem>);
 recipes.addShapeless(<harvestcraft:stuffedmushroomItem>, [<harvestcraft:bakewareItem>, <harvestcraft:grilledmushroomItem>, <harvestcraft:cheeseItem>, <ore:foodToast>]);
+
+# Mushroom Risotto
+recipes.remove(<harvestcraft:mushroomrisottoItem>);
+recipes.addShapeless(<harvestcraft:mushroomrisottoItem>, [<harvestcraft:bakewareItem>, <harvestcraft:friedriceItem>, <harvestcraft:grilledmushroomItem>, <harvestcraft:onionItem>, <harvestcraft:cheeseItem>]);
+
+# Chicken Celery Casserole
+recipes.remove(<harvestcraft:chickencelerycasseroleItem>);
+recipes.addShapeless(<harvestcraft:chickencelerycasseroleItem>, [<harvestcraft:bakewareItem>, <harvestcraft:celeryItem>, <minecraft:cooked_chicken>, <harvestcraft:cheeseItem>, <minecraft:carrot>, <harvestcraft:grilledmushroomItem>]);
 
 # Chicken sandwich
 recipes.remove(<harvestcraft:chickensandwichItem>);
@@ -315,7 +335,7 @@ furnace.addRecipe(<harvestcraft:friedeggItem>, <minecraft:egg>);
 
 # Scrambled Egg
 recipes.remove(<harvestcraft:scrambledeggItem>);
-recipes.addShapeless(<harvestcraft:scrambledeggItem>, [<harvestcraft:skilletItem>, <harvestcraft:friedeggItem>]);
+recipes.addShapeless(<harvestcraft:scrambledeggItem>, [<harvestcraft:skilletItem>, <harvestcraft:friedeggItem>, <harvestcraft:heavycreamItem>]);
 
 # Caramel
 recipes.remove(<harvestcraft:caramelItem>);
@@ -325,9 +345,13 @@ furnace.addRecipe(<harvestcraft:caramelItem>, <minecraft:sugar>);
 recipes.remove(<harvestcraft:taffyItem>);
 recipes.addShapeless(<harvestcraft:taffyItem>, [<harvestcraft:saucepanItem>, <harvestcraft:caramelItem>, <ore:listAllwater>, <ore:dustSalt>]);
 
+# Spaghetti
+recipes.remove(<harvestcraft:spagettiItem>);
+recipes.addShapeless(<harvestcraft:spagettiItem>, [<harvestcraft:saucepanItem>,<harvestcraft:tomatosoupItem>,<harvestcraft:pastaItem>,<harvestcraft:spiceleafItem>,<harvestcraft:cheeseItem>]);
+
 # Spaghetti Meatballs
 recipes.remove(<harvestcraft:spagettiandmeatballsItem>);
-recipes.addShapeless(<harvestcraft:spagettiandmeatballsItem>, [<harvestcraft:saucepanItem>,<harvestcraft:tomatoItem>,<harvestcraft:pastaItem>,<harvestcraft:spiceleafItem>,<ore:listAllbeefcooked>]);
+recipes.addShapeless(<harvestcraft:spagettiandmeatballsItem>, [<harvestcraft:spagettiItem>,<harvestcraft:suaderoItem>]);
 
 # Pizza
 recipes.remove(<harvestcraft:pizzaItem>);
@@ -366,7 +390,7 @@ recipes.addShapeless(<harvestcraft:rainbowcurryItem>, [<harvestcraft:cuttingboar
 
 # Supreme Pizza
 recipes.remove(<harvestcraft:supremepizzaItem>);
-recipes.addShapeless(<harvestcraft:supremepizzaItem>, [<harvestcraft:bakewareItem>,<harvestcraft:doughItem>,<harvestcraft:tomatoItem>,<harvestcraft:cheeseItem>,<ore:listAllporkcooked>,<harvestcraft:bellpepperItem>,<harvestcraft:onionItem>,<harvestcraft:spiceleafItem>]);
+recipes.addShapeless(<harvestcraft:supremepizzaItem>, [<harvestcraft:cuttingboardItem>, <harvestcraft:pizzaItem>,<harvestcraft:chorizoItem>,<harvestcraft:bellpepperItem>,<harvestcraft:onionItem>]);
 
 # Omelet
 recipes.remove(<harvestcraft:omeletItem>);
@@ -501,11 +525,11 @@ recipes.addShapeless(<harvestcraft:oldworldveggiesoupItem>, [<harvestcraft:potIt
 
 # Sweetpotato Souffle
 recipes.remove(<harvestcraft:sweetpotatosouffleItem>);
-recipes.addShapeless(<harvestcraft:sweetpotatosouffleItem>, [<harvestcraft:bakewareItem>,<harvestcraft:bakedsweetpotatoItem>,<harvestcraft:pecanItem>,<harvestcraft:doughItem>,<harvestcraft:butterItem>]);
+recipes.addShapeless(<harvestcraft:sweetpotatosouffleItem>, [<harvestcraft:bakewareItem>,<harvestcraft:bakedsweetpotatoItem>,<ore:cropPecan>,<harvestcraft:doughItem>,<harvestcraft:butterItem>]);
 
 # Pralines
 recipes.remove(<harvestcraft:pralinesItem>);
-recipes.addShapeless(<harvestcraft:pralinesItem>, [<harvestcraft:saucepanItem>,<harvestcraft:pecanItem>,<ore:listAllsugar>,<harvestcraft:heavycreamItem>]);
+recipes.addShapeless(<harvestcraft:pralinesItem>, [<harvestcraft:saucepanItem>,<ore:cropPecan>,<ore:listAllsugar>,<harvestcraft:heavycreamItem>]);
 
 # Pistachio Baked Salmon
 recipes.remove(<harvestcraft:pistachiobakedsalmonItem>);
@@ -521,7 +545,7 @@ recipes.addShapeless(<harvestcraft:toastsandwichItem>, [<ore:foodToast>, <harves
 
 # Sausage in Bread
 recipes.remove(<harvestcraft:sausageinbreadItem>);
-recipes.addShapeless(<harvestcraft:sausageinbreadItem>, [<harvestcraft:bakewareItem>,<harvestcraft:batteredsausageItem>,<harvestcraft:cheeseItem>,<harvestcraft:doughItem>]);
+recipes.addShapeless(<harvestcraft:sausageinbreadItem>, [<harvestcraft:bakewareItem>,<harvestcraft:batteredsausageItem>,<harvestcraft:cheeseItem>,<minecraft:bread>]);
 
 # Beef Wellington
 recipes.remove(<harvestcraft:beefwellingtonItem>);
@@ -531,9 +555,13 @@ recipes.addShapeless(<harvestcraft:beefwellingtonItem>, [<harvestcraft:bakewareI
 recipes.remove(<harvestcraft:epicbaconItem>);
 recipes.addShapeless(<harvestcraft:epicbaconItem>, [<harvestcraft:maplecandiedbaconItem>, <ore:dyeRed>, <ore:dyePurple>,<ore:dyeOrange>,<ore:dyeYellow>,<ore:dyeMagenta>,<ore:dyeGreen>,<ore:dyeBlue>]);
 
-# meatfeastpizza
+# Vegie StirFry
+recipes.remove(<harvestcraft:veggiestirfryItem>);
+recipes.addShapeless(<harvestcraft:veggiestirfryItem>, [<harvestcraft:skilletItem>, <harvestcraft:bellpepperItem>, <minecraft:carrot>, <harvestcraft:friedriceItem>, <harvestcraft:onionItem>, <harvestcraft:chilipepperItem>]);
+
+# Meatfeast Pizza
 recipes.remove(<harvestcraft:meatfeastpizzaItem>);
-recipes.addShapeless(<harvestcraft:meatfeastpizzaItem>, [<harvestcraft:bakewareItem>,<harvestcraft:doughItem>,<harvestcraft:tomatoItem>,<harvestcraft:cheeseItem>,<ore:listAllporkcooked>,<ore:listAllchickencooked>,<ore:listAllbeefcooked>]);
+recipes.addShapeless(<harvestcraft:meatfeastpizzaItem>, [<harvestcraft:cuttingboardItem>, <harvestcraft:pizzaItem>, <harvestcraft:suaderoItem>, <harvestcraft:turkeycookedItem>]);
 
 # onionhamburger
 recipes.remove(<harvestcraft:onionhamburgerItem>);
@@ -545,11 +573,11 @@ recipes.addShapeless(<harvestcraft:coleslawburgerItem>, [<harvestcraft:skilletIt
 
 # roastchicken
 recipes.remove(<harvestcraft:roastchickenItem>);
-recipes.addShapeless(<harvestcraft:roastchickenItem>, [<harvestcraft:bakewareItem>,<ore:listAllchickencooked>, <harvestcraft:saltItem>,<harvestcraft:blackpepperItem>,<harvestcraft:oliveoilItem>]);
+recipes.addShapeless(<harvestcraft:roastchickenItem>, [<harvestcraft:bakewareItem>,<ore:listAllchickencooked>, <ore:dustSalt>,<harvestcraft:blackpepperItem>,<harvestcraft:oliveoilItem>]);
 
 # roastpotatoes
 recipes.remove(<harvestcraft:roastpotatoesItem>);
-recipes.addShapeless(<harvestcraft:roastpotatoesItem>, [<harvestcraft:bakewareItem>,<minecraft:potato>, <harvestcraft:saltItem>,<harvestcraft:blackpepperItem>,<harvestcraft:oliveoilItem>]);
+recipes.addShapeless(<harvestcraft:roastpotatoesItem>, [<harvestcraft:bakewareItem>,<minecraft:potato>, <ore:dustSalt>,<harvestcraft:blackpepperItem>,<harvestcraft:oliveoilItem>]);
 
 # sundayroast
 recipes.remove(<harvestcraft:sundayroastItem>);
@@ -594,6 +622,16 @@ recipes.addShapeless(<harvestcraft:randomtacoItem>, [<harvestcraft:cuttingboardI
 # Bean Burrito
 recipes.remove(<harvestcraft:beanburritoItem>);
 recipes.addShapeless(<harvestcraft:beanburritoItem>, [<harvestcraft:skilletItem>,<harvestcraft:beanItem>,<harvestcraft:tortillaItem>,<harvestcraft:friedriceItem>,<harvestcraft:cheeseItem>]);
+
+# Chicken Parmesan
+recipes.remove(<harvestcraft:chickenparmasanItem>);
+recipes.addShapeless(<harvestcraft:chickenparmasanItem>, [<harvestcraft:bakewareItem>,<ore:foodFlour>,<minecraft:cooked_chicken>,<harvestcraft:cheeseItem>,<harvestcraft:tomatosoupItem>,<harvestcraft:pastaItem>]);
+
+# Asparagus Quiche
+recipes.remove(<harvestcraft:asparagusquicheItem>);
+recipes.addShapeless(<harvestcraft:asparagusquicheItem>, [<harvestcraft:skilletItem>,<harvestcraft:grilledasparagusItem>,<harvestcraft:friedeggItem>,<harvestcraft:onionItem>]);
+
+
 
 # Replace Raw Rice with Fried Rice
 val rice =<ore:cropRice>;

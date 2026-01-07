@@ -87,7 +87,7 @@ mods.tconstruct.Casting.removeTableRecipe(<ThermalFoundation:material:70>);
 mods.tconstruct.Casting.removeBasinRecipe(<ThermalFoundation:Storage:6>);
 
 mods.tconstruct.Casting.addTableRecipe(<Metallurgy:mithril.ingot>, <liquid:mithril.molten> * 144, <TConstruct:metalPattern>, false, 25);
-mods.tconstruct.Casting.addBasinRecipe(<Metallurgy:fantasy.block:7>, <liquid:mithril.molten> * 550, null, false, 125);
+mods.tconstruct.Casting.addBasinRecipe(<Metallurgy:fantasy.block:7>, <liquid:mithril.molten> * 1296, null, false, 225);
 
 #Remove Obsidian dupes
 mods.tconstruct.Casting.removeBasinRecipe(<minecraft:obsidian>);
@@ -97,6 +97,7 @@ mods.tconstruct.Casting.addBasinRecipe(<minecraft:obsidian>, <liquid:obsidian.mo
 mods.tconstruct.Casting.addBasinRecipe(<ExtraUtilities:decorativeBlock1:1>, <liquid:ender> * 150, <minecraft:obsidian>, true, 160);
 
 #Steel Alloy Recipe
+mods.tconstruct.Smeltery.removeAlloy(<liquid:steel.molten>);
 mods.tconstruct.Smeltery.addAlloy(<liquid:steel.molten> * 144, [<liquid:iron.molten> * 144, <liquid:pyrotheum> * 100]);
 
 #Traveller's Gear 

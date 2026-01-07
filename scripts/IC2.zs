@@ -58,10 +58,6 @@ recipes.addShaped(<IC2:reactorCondensator:1>, [[<minecraft:redstone>, <minecraft
 #Broken LZH-Condensator recipe
 recipes.addShaped(<IC2:reactorCondensatorLap:1>, [[<minecraft:redstone>, <IC2:reactorVentCore:1>, <minecraft:redstone>], [<IC2:reactorCondensator:1>, <minecraft:lapis_block>, <IC2:reactorCondensator:1>], [<minecraft:redstone>, <IC2:reactorHeatSwitchCore:1>, <minecraft:redstone>]]);
 
-#GT Buff bronze bricks
-recipes.remove(<gregtech_addon:block_2:13>);
-recipes.addShaped(<gregtech_addon:block_2:13>*6, [[<ore:plateBronze>, <ore:plateBronze>, <ore:plateBronze>], [<minecraft:brick_block>, <ore:craftingToolHardHammer>.transformDamage(12), <minecraft:brick_block>], [<ore:plateBronze>, <ore:plateBronze>, <ore:plateBronze>]]);
-
 #Auto canning machine
 recipes.remove(<gregtech_addon:machine:57>);
 recipes.addShaped(<gregtech_addon:machine:57>, [[null, <IC2:itemTinCan>, null], [null, <IC2:itemTinCan>, null], [<ore:circuitBasic>, <IC2:blockMachine>, <ore:circuitBasic>]]);
@@ -86,11 +82,11 @@ recipes.addShaped(<IC2:itemWeedingTrowel>, [[<ore:ingotIron>, null, <ore:ingotIr
 
 #Crop-Matron
 recipes.remove(<IC2:blockMachine2:2>);
-recipes.addShaped(<IC2:blockMachine2:2>, [[<ore:circuitData>, <ore:craftingMonitorTier02>, <ore:circuitData>], [<IC2:upgradeModule:4>, <gregtech_addon:machine:19>, <IC2:upgradeModule:3>], [<ore:circuitData>, <ore:circuitAdv>, <ore:circuitData>]]);
+recipes.addShaped(<IC2:blockMachine2:2>, [[<ore:circuitData>, <ore:craftingMonitorTier02>, <ore:circuitData>], [<IC2:upgradeModule:4>, <gregtech_addon:machine:19>, <IC2:upgradeModule:3>], [<ore:circuitData>, <ore:circuitAdvanced>, <ore:circuitData>]]);
 
 #Crop Harvester
 recipes.remove(<IC2:blockMachine3:7>);
-recipes.addShaped(<IC2:blockMachine3:7>, [[null, <ore:circuitAdv>, null], [<ore:circuitAdv>, <gregtech_addon:machine:26>, <ore:circuitAdv>], [null, <ore:circuitAdv>, null]]);
+recipes.addShaped(<IC2:blockMachine3:7>, [[null, <ore:circuitAdvanced>, null], [<ore:circuitAdvanced>, <gregtech_addon:machine:26>, <ore:circuitAdvanced>], [null, <ore:circuitAdvanced>, null]]);
 
 #Fertilizer
 recipes.addShaped(<IC2:itemFertilizer>*8, [[<Forestry:mulch>, <minecraft:dye:15>, <Forestry:mulch>], [<ore:dustSulfur>, <Forestry:fertilizerCompound>, <ore:dustSulfur>], [<Forestry:mulch>, <minecraft:dye:15>, <Forestry:mulch>]]);

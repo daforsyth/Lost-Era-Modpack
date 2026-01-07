@@ -3,12 +3,11 @@
 print("Initializing 'Witchery.zs'...");
 
 #Sink
-recipes.remove(<harvestcraft:sink>);
-recipes.addShaped(<harvestcraft:sink>, [[<ore:ingotIron>, <ore:logWood>, <ore:ingotIron>], [<ore:ingotIron>, <witchery:brew.water>, <ore:ingotIron>], [<ore:ingotIron>, <ore:logWood>, <ore:ingotIron>]]);
-recipes.addShaped(<harvestcraft:sink>, [[<ore:ingotCopper>, <ore:logWood>, <ore:ingotCopper>], [<ore:ingotCopper>, <witchery:brew.water>, <ore:ingotCopper>], [<ore:ingotCopper>, <ore:logWood>, <ore:ingotCopper>]]);
-recipes.addShaped(<harvestcraft:sink>, [[<ore:ingotTin>, <ore:logWood>, <ore:ingotTin>], [<ore:ingotTin>, <witchery:brew.water>, <ore:ingotTin>], [<ore:ingotTin>, <ore:logWood>, <ore:ingotTin>]]);
-recipes.addShaped(<harvestcraft:sink>, [[<ore:ingotBronze>, <ore:logWood>, <ore:ingotBronze>], [<ore:ingotBronze>, <witchery:brew.water>, <ore:ingotBronze>], [<ore:ingotBronze>, <ore:logWood>, <ore:ingotBronze>]]);
-recipes.addShaped(<harvestcraft:sink>, [[<ore:ingotSteel>, <ore:logWood>, <ore:ingotSteel>], [<ore:ingotSteel>, <witchery:brew.water>, <ore:ingotSteel>], [<ore:ingotSteel>, <ore:logWood>, <ore:ingotSteel>]]);
+recipes.remove(<harvestcraft:sink:*>);
+recipes.addShaped(<harvestcraft:sink:0>, [[<ore:plankWood>, null, <ore:plankWood>], [<etfuturum:chain>, <witchery:brew.water>, <etfuturum:chain>], [<ore:plankWood>, <ore:plankWood>, <ore:plankWood>]]);
+recipes.addShaped(<harvestcraft:sink:1>, [[<etfuturum:smooth_stone>, null, <etfuturum:smooth_stone>], [<minecraft:cobblestone>, <witchery:brew.water>, <minecraft:cobblestone>], [<etfuturum:smooth_stone>, <etfuturum:smooth_stone>, <etfuturum:smooth_stone>]]);
+recipes.addShaped(<harvestcraft:sink:2>, [[<minecraft:stained_hardened_clay:*>, null, <minecraft:stained_hardened_clay:*>], [<minecraft:clay_ball>, <witchery:brew.water>, <minecraft:clay_ball>], [<minecraft:stained_hardened_clay:*>, <minecraft:stained_hardened_clay:*>, <minecraft:stained_hardened_clay:*>]]);
+recipes.addShaped(<harvestcraft:sink:3>, [[<minecraft:nether_brick>, null, <minecraft:nether_brick>], [<ore:slimeBall>, <witchery:brew.water>, <ore:slimeBall>], [<minecraft:nether_brick>, <minecraft:nether_brick>, <minecraft:nether_brick>]]);
 
 #Misc
 recipes.remove(<ExtraUtilities:golden_lasso>);
@@ -24,6 +23,11 @@ recipes.addShaped(<ExtraUtilities:golden_bag>, [[<witchery:ingredient:102>, <wit
 
 #Patch cheap silver for tech users
 recipes.removeShapeless(<ore:dustSilver>, [<witchery:ingredient:157>, <witchery:ingredient:157>, <witchery:ingredient:157>, <witchery:ingredient:157>, <witchery:ingredient:157>, <witchery:ingredient:157>, <witchery:ingredient:157>, <witchery:ingredient:157>, <witchery:ingredient:157>]);
+
+#Fix witch planks missing slab recipes
+recipes.addShaped(<witchery:witchwoodslab>, [[<witchery:witchwood>, <witchery:witchwood>, <witchery:witchwood>]]);
+recipes.addShaped(<witchery:witchwoodslab:1>, [[<witchery:witchwood:1>, <witchery:witchwood:1>, <witchery:witchwood:1>]]);
+recipes.addShaped(<witchery:witchwoodslab:2>, [[<witchery:witchwood:2>, <witchery:witchwood:2>, <witchery:witchwood:2>]]);
 
 #Remove Artichoke oredict from Water Artichoke
 val artichoke = <ore:cropArtichoke>;
